@@ -197,7 +197,7 @@
             img +
             '<span style="margin-left: 15px;">Complete Payment</span></button></form>';
           formMarkup =
-            '<div id="mpesaForm"><h3 class="mpesaHeader">Proceed to pay with Mpesa</h3>' +
+            '<div id="mpesaForm" ><h3 class="mpesaHeader">Proceed to pay with Mpesa</h3>' +
             form +
             "</div>";
 
@@ -205,6 +205,14 @@
 
           document.body.appendChild(paymentModal);
           paymentModal.style.display = "block";
+
+          paymentModal.addEventListener("click", (e) => {
+            console.log(e.target);
+
+            if (e.target.contains(paymentModal)) {
+              paymentModal.style.display = "none";
+            }
+          });
 
           payButton = document.getElementById("mpesaSend");
 
@@ -242,6 +250,8 @@
             // }
             // loader.style.display = "";
           });
+
+          // Add event listener to close modal when clicking outside the content
         });
       });
     </script>
