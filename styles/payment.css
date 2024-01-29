@@ -35,7 +35,6 @@
   max-width: 400px;
   background: white;
   margin: 5% auto;
-  min-height: 40%;
   padding: 1% 2% 3% 1%;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
   border-radius: 9px;
@@ -90,6 +89,6 @@
 @media only screen and (max-width: 600px) {
   #mpesaForm {
     margin: 55% auto;
-    padding: 1% 5%;
+    padding: 1% 5% 10% 5%;
   }
 }
