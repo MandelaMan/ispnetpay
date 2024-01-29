@@ -113,7 +113,7 @@
 
       @media only screen and (max-width: 600px) {
         .intro {
-          height: 50%;
+          height: 60%;
           border-bottom-right-radius: 100% 30%;
           border-bottom-left-radius: 100% 30%;
         }
@@ -207,8 +207,6 @@
           paymentModal.style.display = "block";
 
           paymentModal.addEventListener("click", (e) => {
-            console.log(e.target);
-
             if (e.target.contains(paymentModal)) {
               paymentModal.style.display = "none";
             }
