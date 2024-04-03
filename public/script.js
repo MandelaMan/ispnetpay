@@ -36,9 +36,40 @@ document.addEventListener("DOMContentLoaded", function () {
               (payButton.disabled = !0),
               (document.getElementById("mpesaAmount").disabled = !0),
               (document.getElementById("mpesaPhoneNumber").disabled = !0),
-              (amountInput = document.getElementById("mpesaAmount").value),
-              (phoneInput = document.getElementById("mpesaPhoneNumber").value);
-            console.log("Ready to send form" + amountInput + phoneInput);
+              (amount = document.getElementById("mpesaAmount").value),
+              (phone = document.getElementById("mpesaPhoneNumber").value);
+
+            const data = {
+              phone,
+              amount,
+            };
+
+            const inputOptions = {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(data),
+            };
+
+            fetch("https://ispnetpay.vercel.app/api/pay/stk", inputOptions)
+              .then((response) => {
+                if (!response.ok) {
+                  throw new Error("Network response was not ok");
+                }
+                return response.json(); // Parse the JSON data
+              })
+              .then((data) => {
+                console.log("Response data:", data);
+                // Handle the response data as needed
+              })
+              .catch((error) => {
+                console.error(
+                  "There was a problem with the POST request:",
+                  error
+                );
+                // Handle errors
+              });
           }
         );
     });
