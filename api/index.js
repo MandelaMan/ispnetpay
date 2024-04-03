@@ -16,11 +16,11 @@ app.listen(3000, () => {
   console.log("Server is up and running " + process.env.APP_PORT);
 });
 
-// app.use("/api/pay", paymentRoutes);
-
 app.get("/api/data", (req, res) => {
   res.json({ message: "Hello from API!" });
 });
+
+// app.use("/api/pay", paymentRoutes);
 
 const ___dirname = path.resolve();
 
