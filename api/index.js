@@ -18,7 +18,7 @@ app.listen(3000, () => {
   console.log("Server is up and running " + process.env.APP_PORT);
 });
 
-app.use("/pay", paymentRoutes);
+app.use("/api/pay", paymentRoutes);
 
 // app.use(express.static(path.join(___dirname, "/client/dist")));
 

@@ -1,1 +1,1 @@
-# ISPNetPay JS
+# api_ispnetpay
