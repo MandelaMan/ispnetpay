@@ -1,0 +1,94 @@
+#mpesaButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  z-index: 9999;
+  background: #6aae2d;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+#paymentModal {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100vh;
+  background: rgb(0, 0, 0, 0.9);
+  color: #000;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 999999;
+}
+
+#mpesaForm {
+  max-width: 400px;
+  background: white;
+  margin: 5% auto;
+  padding: 1% 2% 3% 1%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+  border-radius: 9px;
+}
+
+.mpesaInput {
+  font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  margin: 0 0 5% 0;
+  outline: none;
+  line-height: 1.21428571em;
+  padding: 0.9em 1em;
+  font-size: 1em;
+  background: #ffffff;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  color: rgba(0, 0, 0, 0.87);
+  border-radius: 0.28571429rem;
+  box-shadow: 0em 0em 0em 0em transparent inset;
+  -webkit-transition: color 0.1s ease, border-color 0.1s ease;
+  transition: color 0.1s ease, border-color 0.1s ease;
+  width: 90%;
+}
+
+.mpesaLabel {
+  display: block;
+  margin: 0em 0em 0.28571429rem 0em;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 0.92857143em;
+  font-weight: bold;
+  text-transform: none;
+  font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+.mpesaBtn {
+  color: #fff;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  z-index: 9999;
+  background: #6aae2d;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+.mpesaBtn :hover {
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  #mpesaForm {
+    margin: 55% auto;
+    padding: 1% 5% 10% 5%;
+  }
+}
