@@ -36,8 +36,8 @@ document.addEventListener("DOMContentLoaded", function () {
               (payButton.disabled = !0),
               (document.getElementById("mpesaAmount").disabled = !0),
               (document.getElementById("mpesaPhoneNumber").disabled = !0),
-              (amountInput = document.getElementById("mpesaAmount")),
-              (phoneInput = document.getElementById("mpesaPhoneNumber"));
+              (amountInput = document.getElementById("mpesaAmount").value),
+              (phoneInput = document.getElementById("mpesaPhoneNumber").value);
             console.log("Ready to send form" + amountInput + phoneInput);
           }
         );
