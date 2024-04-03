@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var e = document.createElement("button");
   (e.id = "mpesaButton"),
     (img =
-      '<img style="width: 30px; display: inline; margin: -9px 9px -9px -10px;" src= "/images/mpesa.png">'),
+      '<img style="width:30px;display:inline;margin:-9px 9px -9px -10px;" src= "/images/mpesa.png">'),
     (e.innerHTML = img + "Pay via Mpesa"),
     document.body.appendChild(e),
     e.addEventListener("click", function (e) {
