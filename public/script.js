@@ -36,7 +36,9 @@ document.addEventListener("DOMContentLoaded", function () {
               (payButton.disabled = !0),
               (document.getElementById("mpesaAmount").disabled = !0),
               (document.getElementById("mpesaPhoneNumber").disabled = !0),
-              console.log("Ready to send form");
+              (amountInput = document.getElementById("mpesaAmount")),
+              (phoneInput = document.getElementById("mpesaPhoneNumber"));
+            console.log("Ready to send form" + amountInput + phoneInput);
           }
         );
     });
