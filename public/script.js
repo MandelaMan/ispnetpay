@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
           (form =
             '<form"><input class="mpesaInput" type="text" placeholder="Enter Amount" name="phone" id="mpesaAmount"></input><br>             <input class="mpesaInput" type="text" placeholder="Enter mobile No" name="phone" id="mpesaPhoneNumber"></input><br>' +
             (phoneInstruction =
-              "<strong><em>We will send an Mpesa payment request to this phone number</em></strong>") +
+              "<strong><em>Entered mobile number will recieved Mpesa prompt to pay</em></strong>") +
             '<br><br><button href="" id="mpesaSend" class="mpesaBtn" style="width: 100%;">' +
             img +
             '<span style="margin-left: 15px;">Complete Payment</span></button></form>') +
