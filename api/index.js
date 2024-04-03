@@ -12,19 +12,19 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors());
 
-// const ___dirname = path.resolve();
-
 app.listen(3000, () => {
   console.log("Server is up and running " + process.env.APP_PORT);
 });
 
 app.use("/api/pay", paymentRoutes);
 
-// app.use(express.static(path.join(___dirname, "/client/dist")));
+const ___dirname = path.resolve();
 
-// app.get("*", (req, res) => {
-//   res.sendFile(path.join(___dirname, "client", "dist", "index.html"));
-// });
+app.use(express.static(path.join(___dirname, "/public")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(___dirname, "public", "index.html"));
+});
 
 //This middleware allows us to catch all errors and report
 app.use((err, req, res, next) => {
