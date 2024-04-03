@@ -17,8 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
           '<div id="mpesaForm" ><h3 class="mpesaHeader">Proceed to pay with Mpesa</h3>' +
           (form =
             '<form"><input class="mpesaInput" type="text" placeholder="Enter Amount" name="phone" id="mpesaAmount"></input><br>             <input class="mpesaInput" type="text" placeholder="Enter mobile No" name="phone" id="mpesaPhoneNumber"></input><br>' +
-            (phoneInstruction =
-              "<strong><em>Entered mobile number will recieved Mpesa prompt to pay</em></strong>") +
+            (phoneInstruction = "") +
             '<br><br><button href="" id="mpesaSend" class="mpesaBtn" style="width: 100%;">' +
             img +
             '<span style="margin-left: 15px;">Complete Payment</span></button></form>') +
@@ -36,7 +35,9 @@ document.addEventListener("DOMContentLoaded", function () {
               (payButton.disabled = !0),
               (document.getElementById("mpesaAmount").disabled = !0),
               (document.getElementById("mpesaPhoneNumber").disabled = !0),
-              console.log("Ready to send form");
+              (phone = document.getElementById("mpesaPhoneNumber").value),
+              (amount = document.getElementById("mpesaAmount").value),
+              console.log("Ready to send form" + phone + " " + amount);
           }
         );
     });
