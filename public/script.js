@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   document.head.insertAdjacentHTML(
     "beforeend",
-    '<link rel=stylesheet href="/payment.css">'
+    '<link rel=stylesheet href="/styles/payment.css">'
   );
   var e = document.createElement("button");
   (e.id = "mpesaButton"),
@@ -17,7 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
           '<div id="mpesaForm" ><h3 class="mpesaHeader">Proceed to pay with Mpesa</h3>' +
           (form =
             '<form"><input class="mpesaInput" type="text" placeholder="Enter Amount" name="phone" id="mpesaAmount"></input><br>             <input class="mpesaInput" type="text" placeholder="Enter mobile No" name="phone" id="mpesaPhoneNumber"></input><br>' +
-            (phoneInstruction = "") +
+            (phoneInstruction =
+              "<strong><em>We will send an Mpesa payment request to this phone number</em></strong>") +
             '<br><br><button href="" id="mpesaSend" class="mpesaBtn" style="width: 100%;">' +
             img +
             '<span style="margin-left: 15px;">Complete Payment</span></button></form>') +
@@ -35,9 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
               (payButton.disabled = !0),
               (document.getElementById("mpesaAmount").disabled = !0),
               (document.getElementById("mpesaPhoneNumber").disabled = !0),
-              (phone = document.getElementById("mpesaPhoneNumber").value),
-              (amount = document.getElementById("mpesaAmount").value),
-              console.log("Ready to send form" + phone + " " + amount);
+              console.log("Ready to send form");
           }
         );
     });
