@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   document.head.insertAdjacentHTML(
     "beforeend",
-    '<link rel=stylesheet href="/styles/payment.css">'
+    '<link rel=stylesheet href="/payment.css">'
   );
   var e = document.createElement("button");
   (e.id = "mpesaButton"),
