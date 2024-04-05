@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   (e.id = "mpesaButton"),
     (img =
       '<img style="width:30px;display:inline;margin:-9px 9px -9px -10px;" src= "/images/mpesa.png">'),
-    (e.innerHTML = img + "Pay via Mpesa"),
+    (e.innerHTML = img + "Pay via Airtel"),
     document.body.appendChild(e),
     e.addEventListener("click", function (e) {
       e.preventDefault();
