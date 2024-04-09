@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   (e.id = "mpesaButton"),
     (img =
       '<img style="width:30px;display:inline;margin:-9px 9px -9px -10px;" src= "/images/mpesa.png">'),
-    (e.innerHTML = img + "Pay via Airtel"),
+    (e.innerHTML = img + "Pay via Mpesa"),
     document.body.appendChild(e),
     e.addEventListener("click", function (e) {
       e.preventDefault();
@@ -37,6 +37,8 @@ document.addEventListener("DOMContentLoaded", function () {
               (document.getElementById("mpesaAmount").disabled = !0),
               (document.getElementById("mpesaPhoneNumber").disabled = !0),
               (amount = document.getElementById("mpesaAmount").value),
+              (bundle_id = document.getElementById("bundle_id").value),
+              (mac_address = document.getElementById("mac_address").value),
               (phone = document.getElementById("mpesaPhoneNumber").value);
 
             const data = {
