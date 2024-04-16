@@ -54,24 +54,26 @@ document.addEventListener("DOMContentLoaded", function () {
               body: JSON.stringify(data),
             };
 
-            fetch("https://ispnetpay.vercel.app/api/pay/stk", inputOptions)
-              .then((response) => {
-                if (!response.ok) {
-                  throw new Error("Network response was not ok");
-                }
-                return response.json(); // Parse the JSON data
-              })
-              .then((data) => {
-                console.log("Response data:", data);
-                // Handle the response data as needed
-              })
-              .catch((error) => {
-                console.error(
-                  "There was a problem with the POST request:",
-                  error
-                );
-                // Handle errors
-              });
+            console.log(amount + bundle_id + mac_address + phone);
+
+            // fetch("https://ispnetpay.vercel.app/api/pay/stk", inputOptions)
+            //   .then((response) => {
+            //     if (!response.ok) {
+            //       throw new Error("Network response was not ok");
+            //     }
+            //     return response.json(); // Parse the JSON data
+            //   })
+            //   .then((data) => {
+            //     console.log("Response data:", data);
+            //     // Handle the response data as needed
+            //   })
+            //   .catch((error) => {
+            //     console.error(
+            //       "There was a problem with the POST request:",
+            //       error
+            //     );
+            //     // Handle errors
+            //   });
           }
         );
     });
