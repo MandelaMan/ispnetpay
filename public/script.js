@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
   document.head.insertAdjacentHTML(
     "beforeend",
-    '<link rel=stylesheet href="/styles/payment.css">'
+    '<link rel=stylesheet href="https://ispnetpay.vercel.app/payment.css">'
   );
+
   var e = document.createElement("button");
   (e.id = "mpesaButton"),
     (img =

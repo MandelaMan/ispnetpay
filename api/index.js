@@ -1,5 +1,6 @@
 const express = require("express");
 const paymentRoutes = require("./routes/payment.route");
+const taaraRoutes = require("./routes/taara.route");
 const cookieParser = require("cookie-parser");
 const path = require("path");
 var cors = require("cors");
@@ -16,19 +17,16 @@ app.listen(3000, () => {
   console.log("Server is up and running " + process.env.APP_PORT);
 });
 
-// app.get("/api/data", (req, res) => {
-//   res.json({ message: "Hello from API!" });
-// });
-
-app.use("/api/pay", paymentRoutes);
-
 const ___dirname = path.resolve();
 
 app.use(express.static(path.join(___dirname, "/public")));
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(___dirname, "public", "index.html"));
-});
+app.use("/api/taarashare", taaraRoutes);
+app.use("/api/pay", paymentRoutes);
+
+// app.get("/api/data", (req, res) => {
+//   res.json({ message: "Hello from API!" });
+// });
 
 //This middleware allows us to catch all errors and report
 app.use((err, req, res, next) => {
