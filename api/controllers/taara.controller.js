@@ -3,16 +3,7 @@ const moment = require("moment");
 const axios = require("axios");
 const fs = require("fs");
 
-const getRandomInt = (min, max) => {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-};
-
-const mac_address = "00-50-56-C0-00-08";
-
-function readJsonFromFile(file_location, cb) {
+const readJsonFromFile = (file_location, cb) => {
   fs.readFile(file_location, "utf-8", (err, jsonString) => {
     if (err) {
       return cb && cb(err);
@@ -25,7 +16,7 @@ function readJsonFromFile(file_location, cb) {
       return cb && cb(err);
     }
   });
-}
+};
 
 module.exports = {
   activateBundles: (req, res) => {
@@ -73,7 +64,7 @@ module.exports = {
             console.log(err);
           }
 
-          let details = data.filter((d) => d.user_id === req.params.id);
+          let details = data.filter((d) => d.user_id === req.params.id)[0];
 
           res.status(200).json(details);
         });
