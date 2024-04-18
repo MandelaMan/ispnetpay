@@ -18,7 +18,7 @@ module.exports = {
       bundle: {
         id: "Tyr56l9",
         is_active: false,
-        unused: 559,
+        unused: Math.random(),
       },
       mac_address: "00-B0-D0-63-C2-26",
       venue_id: "D45123",
