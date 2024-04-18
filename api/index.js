@@ -11,7 +11,13 @@ const app = express();
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors());
+const corsConfig = {
+  origin: "",
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE"],
+};
+app.use(cors(corsConfig));
+app.options("", cors(corsConfig));
 
 app.listen(3000, () => {
   console.log("Server is up and running " + process.env.APP_PORT);
