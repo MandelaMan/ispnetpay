@@ -1,0 +1,35 @@
+[
+  {
+    "user_id": "6232i-h8732-yht66-8756r",
+    "mac_address": "00-50-56-C0-00-08",
+    "venue_id": "D45126",
+    "device_name": "Lenovo",
+    "bundle": {
+      "id": "Tyr56l9",
+      "is_active": false,
+      "unused": 345
+    }
+  },
+  {
+    "user_id": "9992i-a8732-ykt66-8236r",
+    "mac_address": "00-30-48-11-11-11",
+    "venue_id": "D45127",
+    "device_name": "Iphone X",
+    "bundle": {
+      "id": "Tyr56l9",
+      "is_active": false,
+      "unused": 2500
+    }
+  },
+  {
+    "user_id": "1232i-t8112-qst66-8791f",
+    "mac_address": "00-60-67-12-34-56",
+    "venue_id": "D45128",
+    "device_name": "Samsung S24",
+    "bundle": {
+      "id": "Tyr56l9",
+      "is_active": false,
+      "unused": 0
+    }
+  }
+]

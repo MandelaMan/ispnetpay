@@ -3,6 +3,11 @@ const moment = require("moment");
 const axios = require("axios");
 
 module.exports = {
+  testSTKPush: async (req, res, next) => {
+    res.status(200).json({
+      message: "ok",
+    });
+  },
   InitiateSTKPush: async (req, res, next) => {
     const { phone, amount } = req.body;
 

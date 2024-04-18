@@ -5,7 +5,7 @@ const {
 } = require("../controllers/taara.controller.js");
 const router = express.Router();
 
-router.get("/details", getDetails);
+router.get("/details/:id", getDetails);
 router.post("/activate", activateBundles);
 
 module.exports = router;
